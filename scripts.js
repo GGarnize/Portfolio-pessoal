@@ -102,6 +102,56 @@ function portfolioContent() {
 
 // Função para gerar o conteúdo da página "Contato"
 function contatoContent() {
+  // Adiciona event listener para o formulário de contato aqui
+  setTimeout(() => {
+    document
+      .getElementById("contact-form")
+      .addEventListener("submit", function (event) {
+        // Previne o comportamento padrão do formulário (enviar o formulário para o navegador)
+        event.preventDefault();
+
+        // Captura os valores dos campos pelo ID
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        // Envia os dados para o Formspree (plataforma de envio de e-mail)
+        fetch("https://formspree.io/f/xwkgqyvd", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: name,
+            email: email,
+            message: message,
+          }),
+        })
+          .then((response) => {
+            // Limpa os campos se o envio for bem-sucedido
+            if (response.ok) {
+              document.getElementById("name").value = "";
+              document.getElementById("email").value = "";
+              document.getElementById("message").value = "";
+              alert("Mensagem enviada com sucesso!");
+            } else {
+              // Exibe uma mensagem de erro se o envio falhar
+              alert(
+                "Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente."
+              );
+            }
+          })
+          .catch((error) => {
+            console.error("Erro:", error);
+            // Exibe uma mensagem de erro se ocorrer um erro durante o envio
+            alert(
+              "Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente."
+            );
+          });
+      });
+  }, 0);
+
+  // Retorna o HTML do conteúdo da página "Contato"
   return `
         <div class="contato-container">
             <h1 class="main-title">Contato</h1>
@@ -171,6 +221,7 @@ document.getElementById("contato").addEventListener("click", () => {
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("content").innerHTML = homeContent();
   setActiveButton("home"); // Define a home como ativa logo qdo carregar a página!
+
   // Adiciona event escutando o botão "Voltar" em todos os conteúdos
   document.getElementById("content").addEventListener("click", (event) => {
     if (event.target.classList.contains("btn-voltar")) {
@@ -178,53 +229,4 @@ document.addEventListener("DOMContentLoaded", () => {
       setActiveButton("home");
     }
   });
-});
-
-// Escutar evento de envio do formulário de contato
-document.addEventListener("DOMContentLoaded", function () {
-  document
-    .getElementById("contact-form")
-    .addEventListener("submit", function (event) {
-      // Previne o comportamento padrão do formulário (enviar o formulário p navegador)
-      event.preventDefault();
-
-      // Captura os valores dos campos pelo ID
-      const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const message = document.getElementById("message").value;
-
-      // Envia os dados para o Formspree(plataforma de envio de e-mail)
-      fetch("https://formspree.io/f/xwkgqyvd", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: name,
-          email: email,
-          message: message,
-        }),
-      })
-        .then((response) => {
-          // Limpa os campos se o envio for bem-sucedido
-          if (response.ok) {
-            document.getElementById("name").value = "";
-            document.getElementById("email").value = "";
-            document.getElementById("message").value = "";
-            alert("Mensagem enviada com sucesso!");
-          } else {
-            // Exibe uma mensagem de erro se o envio falhar
-            alert(
-              "Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente."
-            );
-          }
-        })
-        .catch((error) => {
-          console.error("Erro:", error);
-          // Exibe uma mensagem de erro se ocorrer um erro durante o envio
-          alert(
-            "Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente."
-          );
-        });
-    });
 });
