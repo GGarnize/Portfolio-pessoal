@@ -100,7 +100,13 @@ function portfolioContent() {
     `;
 }
 
-// Função para gerar o conteúdo da página "Contato"
+/**
+ *  Função para gerar o conteúdo da página "Contato"
+ *  Essa foi um pouco diferente, porque para que funcione o su bmit.
+ *  Para isso, foi necessário adicionar um event listener para o formulário.
+ *  só que tive que adicionar o listner na função, porque se eu adicionar no
+ *  js direto, ele fica "submit" como undefined, pois o form nao tinha sido montado ainda
+ * */
 function contatoContent() {
   // Adiciona event listener para o formulário de contato aqui
   setTimeout(() => {
