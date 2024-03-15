@@ -13,11 +13,11 @@
 function homeContent() {
   return `
         <div class="home-container">
-            <h1 class="main-title">Guilherme de Oliveira Garnize</h1>
+            <h1 class="main-title">Guilherme de Oliveira Garnize.</h1>
             <p class="boxcontent">RU: 4579677</p>
             <p class="boxcontent">Curso de Análise e Desenvolvimento de Sistemas - UNINTER</p>
             <p class="boxcontent">Matéria: Fundamentos da Programação Web</p>
-            <p class="boxcontent">Desenvolvendo por amor ao conhecimento e aos codigos em si.</p>
+            <p class="boxcontent">Conduzido pelo compromisso com a excelência e a inovação, desafiando limites para criar soluções que impactam significativamente o mundo.</p>
         </div>
     `;
 }
