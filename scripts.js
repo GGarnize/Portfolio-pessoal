@@ -24,9 +24,13 @@ function homeContent() {
 
 // Função para gerar o conteúdo da página "Sobre Mim"
 function sobreMimContent() {
+  const idade = calcularIdade('1997-06-17');
+  const cidade = "Santa cruz do sul - RS"
+  const hobbies = "Jogar alguns jogos tanto competitivos quanto casuais, recentemente comecei um curso na área de gastronomia, descobrindo um novo interesse que é em fazer experiencias na cozinha"
   return `
         <div class="sobre-container">
             <h1 class="main-title">Sobre Mim</h1>
+            <p class="boxcontent">Olá, meu nome é Guilherme de Oliveira Garnize. Tenho ${idade} anos e moro em ${cidade}. Nos meus tempos livres, gosto de ${hobbies}; O que me ajuda a manter um equilíbrio saudável entre vida profissional e pessoal.</p>
             <p class="boxcontent">Minha jornada no mundo da tecnologia começou nos bastidores, como técnico de informática. Aqui, mergulhei nos fundamentos de software e sistemas, além da manutenção de hardware. Esses primeiros passos me deram uma base robusta e uma visão clara das necessidades dos usuários.</p>
             <p class="boxcontent">Com o tempo, evoluí para a área de infraestrutura, cuidando do monitoramento de servidores e links de internet, onde aprimorei habilidades essenciais para manter sistemas e serviços sempre disponíveis e seguros.</p>
             <p class="boxcontent">No momento, meu foco está em desenvolvimento na Data4Company, onde me dedico a criar e otimizar microserviços. Trabalho com sistemas de gerenciamento de usuários escaláveis e seguros, além de integrar APIs para diversas funcionalidades, como importação de dados de sistemas ERP e rastreamento de cargas.</p>
@@ -179,6 +183,18 @@ function contatoContent() {
           <button class="btn-voltar">Voltar</button>
         </div>
     `;
+}
+
+// Função para calcular a idade com base na data de nascimento
+function calcularIdade(dataNascimento) {
+  const hoje = new Date();
+  const nascimento = new Date(dataNascimento);
+  let idade = hoje.getFullYear() - nascimento.getFullYear();
+  const m = hoje.getMonth() - nascimento.getMonth();
+  if (m < 0 || (m === 0 && hoje.getDate() < nascimento.getDate())) {
+    idade--;
+  }
+  return idade;
 }
 
 // Função para definir o botão "ativo" no menu
