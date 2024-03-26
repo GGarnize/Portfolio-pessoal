@@ -25,21 +25,23 @@ function homeContent() {
 // Função para gerar o conteúdo da página "Sobre Mim"
 function sobreMimContent() {
   const idade = calcularIdade('1997-06-17');
-  const cidade = "Santa cruz do sul - RS"
-  const hobbies = "Jogar alguns jogos tanto competitivos quanto casuais, recentemente comecei um curso na área de gastronomia, descobrindo um novo interesse que é em fazer experiencias na cozinha"
+  const cidade = "Santa Cruz do Sul - RS";
+  const hobbies = "jogar jogos, tanto os competitivos quanto os casuais, e recentemente me aventurei no mundo da gastronomia, onde estou descobrindo o prazer de criar experiências saborosas na cozinha";
+
   return `
         <div class="sobre-container">
             <h1 class="main-title">Sobre Mim</h1>
-            <p class="boxcontent">Olá, meu nome é Guilherme de Oliveira Garnize. Tenho ${idade} anos e moro em ${cidade}. Nos meus tempos livres, gosto de ${hobbies}; O que me ajuda a manter um equilíbrio saudável entre vida profissional e pessoal.</p>
-            <p class="boxcontent">Minha jornada no mundo da tecnologia começou nos bastidores, como técnico de informática. Aqui, mergulhei nos fundamentos de software e sistemas, além da manutenção de hardware. Esses primeiros passos me deram uma base robusta e uma visão clara das necessidades dos usuários.</p>
-            <p class="boxcontent">Com o tempo, evoluí para a área de infraestrutura, cuidando do monitoramento de servidores e links de internet, onde aprimorei habilidades essenciais para manter sistemas e serviços sempre disponíveis e seguros.</p>
-            <p class="boxcontent">No momento, meu foco está em desenvolvimento na Data4Company, onde me dedico a criar e otimizar microserviços. Trabalho com sistemas de gerenciamento de usuários escaláveis e seguros, além de integrar APIs para diversas funcionalidades, como importação de dados de sistemas ERP e rastreamento de cargas.</p>
-            <p class="boxcontent">Cada etapa da minha carreira contribuiu para o meu leque de habilidades técnicas e de resolução de problemas. Estou sempre em busca de novos desafios e oportunidades para aplicar e expandir minhas habilidades, visando criar soluções inovadoras que atendam às demandas do mercado.</p>
-            <p class="boxcontent">Eu nunca achei necessário fazer faculdade. Já tentei iniciar cursos de administração e até mesmo ADS por três vezes, mas tive que parar, pois não via necessidade naquilo. Porém, tudo mudou quando descobri um MBA que realmente despertou meu interesse. Vi então a necessidade de fazer a graduação, como um passo fundamental para alcançar esse conhecimento superior e cumprir minha meta de concluir o MBA que se tornou minha maior ambição.</p>
+            <p class="boxcontent">Fala, pessoal! Eu sou o Guilherme, um dev cheio de curiosidades, com ${idade} anos de histórias e muitos códigos na bagagem. Vivo em ${cidade}, onde equilibro a vida de programador com momentos de relax, ${hobbies}. A tecnologia sempre foi minha praia, mas um bom prato recém-preparado tem o seu lugar especial!</p>
+            <p class="boxcontent">Comecei minha jornada nos bastidores da tecnologia como técnico de informática, mergulhando de cabeça nos mistérios do hardware e software. Foi ali que comecei a entender do que os usuários realmente precisam.</p>
+            <p class="boxcontent">Depois de um tempo, me joguei na infraestrutura, monitorando servidores e links de internet. Foi uma época de muito aprendizado sobre manter sistemas e serviços sempre a postos e seguros.</p>
+            <p class="boxcontent">Hoje, estou focado em desenvolvimento na Data4Company, fazendo mágica com microserviços e integrando APIs para um monte de coisas legais, como ERP e rastreamento de cargas.</p>
+            <p class="boxcontent">Minha carreira até aqui foi um mix de desafios técnicos e quebra-cabeças complexos. Estou sempre de olho em novidades e buscando maneiras de usar minhas habilidades para criar soluções que façam diferença.</p>
+            <p class="boxcontent">Sobre a faculdade? Bom, tentei algumas vezes, mas foi o MBA que realmente me pegou. Foi aí que vi o quanto é importante juntar a teoria com a prática, e desde então, essa tem sido minha meta de vida.</p>
             <button class="btn-voltar">Voltar</button>
         </div>
     `;
 }
+
 
 // Função para gerar o conteúdo da página "Formação"
 function formacaoContent() {
