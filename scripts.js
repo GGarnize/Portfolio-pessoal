@@ -13,7 +13,7 @@
 function homeContent() {
   return `
         <div class="home-container">
-            <h1 class="main-title">Guilherme de Oliveira Garnize.</h1>
+            <h1 class="main-title">Oi! Eu sou o Guilherme.</h1>
             <p class="boxcontent">Cursando Análise e Desenvolvimento de Sistemas - UNINTER</p>
             <p class="boxcontent">Conduzido pelo compromisso com a excelência e a inovação, desafiando limites para criar soluções que impactam significativamente o mundo.</p>
         </div>
