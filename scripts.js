@@ -87,13 +87,6 @@ function portfolioContent() {
                 <div class="project-links"><a href="https://github.com/GGarnize/startupgame" target="_blank" class="project-link"><i class="fab fa-github"></i> Startup Game</a></div>
             </div>
             <div class="project">
-                <h2 class="project-title">Bot Telegram</h2>
-                <p class="project-description">Criei um bot de Telegram para ajudar na gestão de uma barbearia de um amigo.</p>
-                <p class="project-description">O bot consome um backend desenvolvido por uma amiga e ambos foram feitos utilizando apenas Javascript (Node.js).</p>
-                <div class="project-links"><a href="https://github.com/GGarnize/bot-telegram" target="_blank" class="project-link"><i class="fab fa-github"></i> Bot Telegram</a></div>
-                <div class="project-links"><a href="https://github.com/GGarnize/backend-barbershop" target="_blank" class="project-link"><i class="fab fa-github"></i> Backend</a></div>
-            </div>
-            <div class="project">
                 <h2 class="project-title">Projetos pela Empresa</h2>
                 <p class="project-description">Não tenho muitos projetos no meu GitHub pessoal, mas tenho muitos projetos feitos pela empresa.</p>
                 <p class="project-description">Estes incluem FrontEnds feitos em Quasar (Vue.js), React, PHP, e BackEnds feitos em Laravel (PHP), NodeJs, .Net (C#).</p>
